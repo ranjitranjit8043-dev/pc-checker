@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptop Game Checker</title>
+    <meta name="description" content="Check whether your laptop can run demanding games with a simple score-based tool." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero-card">
+        <div>
+          <p class="eyebrow">Gaming compatibility tool</p>
+          <h1>See if your laptop can handle high-end games</h1>
+          <p class="hero-copy">Choose a game and rate your CPU, GPU, and RAM to get a quick estimate.</p>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
+          <span class="toggle-text">Dark mode</span>
+        </button>
+      </header>
+
+      <main class="content-grid">
+        <section class="panel">
+          <form id="checker-form">
+            <label for="game">Choose a game</label>
+            <select id="game" name="game">
+              <option value="valorant">Valorant</option>
+              <option value="fortnite">Fortnite</option>
+              <option value="gta5">GTA V</option>
+              <option value="apex">Apex Legends</option>
+              <option value="pubg">PUBG</option>
+              <option value="warzone">Call of Duty: Warzone</option>
+              <option value="overwatch2">Overwatch 2</option>
+              <option value="cyberpunk">Cyberpunk 2077</option>
+              <option value="hogwarts">Hogwarts Legacy</option>
+              <option value="alanwake2">Alan Wake 2</option>
+              <option value="baldursgate3">Baldur's Gate 3</option>
+              <option value="rocketleague">Rocket League</option>
+            </select>
+
+            <label for="cpu">CPU score (1-10)</label>
+            <input id="cpu" name="cpu" type="number" min="1" max="10" value="6" />
+
+            <label for="gpu">GPU score (1-10)</label>
+            <input id="gpu" name="gpu" type="number" min="1" max="10" value="6" />
+
+            <label for="ram">RAM (GB)</label>
+            <input id="ram" name="ram" type="number" min="4" max="64" value="16" />
+
+            <button class="submit-btn" type="submit">Check compatibility</button>
+          </form>
+        </section>
+
+        <section id="result" class="result-card" aria-live="polite">
+          <h2>Ready to check</h2>
+          <p>Pick a title and your hardware score to see whether your laptop looks ready for it.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
